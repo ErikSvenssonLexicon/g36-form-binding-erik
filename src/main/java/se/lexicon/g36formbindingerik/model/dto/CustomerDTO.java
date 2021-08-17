@@ -66,4 +66,16 @@ public class CustomerDTO implements Serializable {
     public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
     }
+
+    @Override
+    public String toString() {
+        return "CustomerDTO{" +
+                "email='" + email + '\'' +
+                ", street='" + street + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", city='" + city + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", cellPhone='" + cellPhone + '\'' +
+                '}';
+    }
 }

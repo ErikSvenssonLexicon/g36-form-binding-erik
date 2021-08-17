@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+    <form th:action="@{/customer/create/process}" method="post" th:object="${form}">
+        <label for="email">Email</label>
+        <input type="email" th:value="${form.email}" th:field="*{email}" id="email"  placeholder="Please enter your email..."> <br>
+        <label for="street">Street</label>
+        <input type="text" th:value="${form.street}" th:field="*{street}" id="street"  placeholder="Enter your street address..."> <br>
+        <label for="zipCode">Zip Code</label>
+        <input type="text" th:value="${form.zipCode}" th:field="*{zipCode}" id="zipCode"  placeholder="Enter your zip code..."> <br>
+        <label for="city">City</label>
+        <input type="text" th:value="${form.city}" th:field="*{city}" id="city" placeholder="Enter the city you live in..."> <br>
+        <label for="homePhone">Home Phone</label>
+        <input type="text" th:value="${form.homePhone}" th:field="*{homePhone}" id="homePhone"  placeholder="Your phone number..."> <br>
+        <label for="cellPhone">Cell Phone</label>
+        <input type="text" th:value="${form.cellPhone}" th:field="*{cellPhone}" id="cellPhone"  placeholder="Your cell phone number..."> <br>
+        <input type="submit" value="Send">
+    </form>
 
 </body>
 </html>
